@@ -11,6 +11,9 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        border: "#2e2e2e",
+        card:"#181818",
+        button:"#006239"
       },
       borderWidth:{
         '0.5':'0.5px'

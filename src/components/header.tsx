@@ -28,7 +28,7 @@ const Header: FC = () => {
     },[])
 
     return (
-        <header className="border-b-0.5">
+        <header className="border-b-0.5 my-2 sticky top-0 z-40">
             <nav className="p-4 flex">
                 <ul className="w-full hidden sm:flex justify-center space-x-5">
                     <li><Link href="/#about">About</Link></li>
