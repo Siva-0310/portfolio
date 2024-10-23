@@ -12,6 +12,13 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      borderWidth:{
+        '0.5':'0.5px'
+      },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+        lora: ['Lora', 'serif'],
+      },
     },
   },
   plugins: [],
