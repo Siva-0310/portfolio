@@ -27,6 +27,14 @@ const Header: FC = () => {
         }
     },[])
 
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.classList.add("overflow-hidden");
+        } else {
+            document.body.classList.remove("overflow-hidden");
+        }
+    }, [isMenuOpen]);
+
     return (
         <header className="border-b-0.5 my-2 sticky top-0 z-40">
             <nav className="p-4 flex">
