@@ -35,8 +35,12 @@ const Header: FC = () => {
         }
     }, [isMenuOpen]);
 
+    const handleLinkClick = () => {
+        setIsMenuOpen(false);
+    };
+
     return (
-        <header className="border-b-0.5 my-2 sticky top-0 z-40">
+        <header className="bg-card border-b-0.5 my-2 sticky top-0 z-40">
             <nav className="p-4 flex">
                 <ul className="w-full hidden sm:flex justify-center space-x-5">
                     <li><Link href="/#about">About</Link></li>
@@ -52,11 +56,11 @@ const Header: FC = () => {
             {isMenuOpen && (
                 <nav className="sm:hidden h-screen flex flex-col justify-start p-4">
                     <ul className="space-y-2">
-                        <li className="py-2 border-b-0.5"><Link href="/#about">About</Link></li>
-                        <li className="py-2 border-b-0.5"><Link href="/#experience">Experience</Link></li>
-                        <li className="py-2 border-b-0.5"><Link href="/#projects">Projects</Link></li>
-                        <li className="py-2 border-b-0.5"><Link href="/#contact">Contact</Link></li>
-                        <li className="py-2 border-b-0.5"><Link href="/blogs">Blogs</Link></li>
+                        <li className="py-2 border-b-0.5" onClick={handleLinkClick}><Link href="/#about">About</Link></li>
+                        <li className="py-2 border-b-0.5" onClick={handleLinkClick}><Link href="/#experience">Experience</Link></li>
+                        <li className="py-2 border-b-0.5" onClick={handleLinkClick}><Link href="/#projects">Projects</Link></li>
+                        <li className="py-2 border-b-0.5" onClick={handleLinkClick}><Link href="/#contact">Contact</Link></li>
+                        <li className="py-2 border-b-0.5" onClick={handleLinkClick}><Link href="/blogs">Blogs</Link></li>
                     </ul>
                 </nav>
             )}

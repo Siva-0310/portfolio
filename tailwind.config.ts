@@ -14,7 +14,8 @@ const config: Config = {
         border: "#2e2e2e",
         card:"#181818",
         button:"#006239",
-        logos:"#b0b0b0"
+        logos:"#b0b0b0",
+        dark: "#1e1e1e"
 
       },
       borderWidth:{
