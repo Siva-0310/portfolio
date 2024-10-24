@@ -13,7 +13,9 @@ const config: Config = {
         foreground: "var(--foreground)",
         border: "#2e2e2e",
         card:"#181818",
-        button:"#006239"
+        button:"#006239",
+        logos:"#b0b0b0"
+
       },
       borderWidth:{
         '0.5':'0.5px'

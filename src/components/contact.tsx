@@ -59,11 +59,11 @@ const Contact: FC = () => {
             onChange={(e) => {
               setMessage(e.target.value);
             }}
-            rows={5}
+            rows={8}
           />
         </div>
         <div className="flex justify-center m-4">
-          <button className="py-2 px-5 rounded-xl bg-orange-400 focus:ring-1 focus:ring-orange-700">
+          <button className="py-2 px-5 rounded-xl bg-orange-500 focus:ring-1 focus:ring-orange-700">
             Send
           </button>
         </div>
