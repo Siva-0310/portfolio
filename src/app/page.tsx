@@ -3,6 +3,7 @@ import { FaLinkedin } from "react-icons/fa";
 import Header from "@/components/header";
 import Contact from "@/components/contact";
 import About from "@/components/about";
+import Experience from "@/components/experience";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Header/>
       <main className="flex flex-col items-center">
         <About/>
+        <Experience/>
         <Contact/>
       </main>
       <footer className="bg-dark flex items-center justify-center gap-x-5 p-10">
