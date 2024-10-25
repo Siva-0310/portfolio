@@ -3,65 +3,32 @@ import { FC } from "react";
 
 const About: FC = () => {
     return (
-        <section id="about" className="flex w-[60%] my-5">
-            <div className="flex flex-col justify-start w-full">
-                <h1 className="font-semibold text-lg font-poppins">About Me</h1>
-                <p className="text-sm my-4">
-                    Hi, I’m <strong>Siva</strong>, a <strong>backend developer</strong> with a passion for building efficient and scalable server-side applications. 
-                    I have a solid foundation in <strong>Golang</strong>, <strong>Python</strong>, and <strong>SQL</strong>, and 
-                    I’m excited to explore the world of <strong>machine learning</strong> to enhance my projects. 
-                    I enjoy tackling challenges and am constantly seeking opportunities to improve my skills. I’m eager to learn, collaborate, and contribute to innovative solutions that make a difference. 
-                    Let’s connect!
-                </p>
-                <h1 className="font-semibold text-lg font-poppins">Skills</h1>
-                <ul className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-4 mt-5">
-                    {/* Backend Development */}
-                    <li>
-                        <Image src="/icons/python.svg" alt="Python" width={48} height={48} />
-                    </li>
-                    <li>
-                        <Image src="/icons/gopher.svg" alt="Golang" width={48} height={48} />
-                    </li>
-                    <li>
-                        <Image src="/icons/docker.svg" alt="Docker" width={48} height={48} />
-                    </li>
-                    <li>
-                        <Image src="/icons/rabbitmq.svg" alt="RabbitMQ" width={48} height={48} />
-                    </li>
-                    <li>
-                        <Image src="/icons/fastapi.svg" alt="FastAPI" width={48} height={48} />
-                    </li>
-                    <li>
-                        <Image src="/icons/git.svg" alt="Git" width={48} height={48} />
-                    </li>
-                    <li>
-                        <Image src="/icons/bash.svg" alt="Bash" width={48} height={48} />
-                    </li>
-                    
-                    {/* Databases */}
-                    <li>
-                        <Image src="/icons/postgres.svg" alt="PostgreSQL" width={48} height={48} />
-                    </li>
-                    <li>
-                        <Image src="/icons/redis.svg" alt="Redis" width={48} height={48} />
-                    </li>
-                    
-                    {/* Deployment & Infrastructure */}
-                    <li>
-                        <Image src="/icons/kubernetes.svg" alt="Kubernetes" width={48} height={48} />
-                    </li>
-                    <li>
-                        <Image src="/icons/nginx.svg" alt="Nginx" width={48} height={48} />
-                    </li>
+        <section id="about" className="flex flex-col items-center p-6 w-full bg-neutral-800">
+            <div>
+                <h1 className="font-poppins font-semibold text-xl">About Me</h1>
+                <p className="prose prose-sm sm:prose-base mt-4 text-white">
+                    I’m Siva, a backend developer with a passion for creating scalable and efficient systems. 
+                    I specialize in using <strong className="text-white">Go</strong> and <strong className="text-white">Python</strong> for robust application development, 
+                    along with managing databases like <strong className="text-white">PostgreSQL</strong>. My expertise extends to leveraging <strong className="text-white">Docker</strong> for containerization, 
+                    ensuring seamless deployment and orchestration of services. With a strong foundation in <strong className="text-white">RabbitMQ</strong> for messaging, REST APIs for communication, 
+                    and <strong className="text-white">WebSockets</strong> for real-time interactions, I am dedicated to delivering high-quality solutions that meet user needs. 
+                    I have a keen interest in machine learning, particularly in research-oriented fields. I enjoy tackling challenges and am constantly 
+                    seeking opportunities to improve my skills. I’m eager to learn, collaborate, and contribute to innovative solutions that make a difference. 
+                    Let’s connect!</p>
 
-                    {/* Machine Learning */}
-                    <li>
-                        <Image src="/icons/pytorch.svg" alt="PyTorch" width={48} height={48} />
-                    </li>
-                    <li>
-                        <Image src="/icons/scikit_learn.svg" alt="Scikit-learn" width={48} height={48} />
-                    </li>
-                </ul>
+                    <ul className="mt-10 grid grid-cols-4 xs:grid-cols-5 sm:grid-cols-6 lg:grid-cols-7 gap-10">
+                        <li className="flex items-center justify-center"><Image src={"/icons/gopher.svg"} width={48} height={48} alt="golang"/></li>
+                        <li className="flex items-center justify-center"><Image src={"/icons/python.svg"} width={48} height={48} alt="python"/></li>
+                        <li className="flex items-center justify-center"><Image src={"/icons/bash.svg"} width={48} height={48} alt="bash"/></li>
+                        <li className="flex items-center justify-center"><Image src={"/icons/fastapi.svg"} width={48} height={48} alt="fastapi"/></li>
+                        <li className="flex items-center justify-center"><Image src={"/icons/docker.svg"} width={48} height={48} alt="docker"/></li>
+                        <li className="flex items-center justify-center"><Image src={"/icons/kubernetes.svg"} width={48} height={48} alt="kubernetes"/></li>
+                        <li className="flex items-center justify-center"><Image src={"/icons/postgres.svg"} width={48} height={48} alt="postgres"/></li>
+                        <li className="flex items-center justify-center"><Image src={"/icons/redis.svg"} width={48} height={48} alt="redis"/></li>
+                        <li className="flex items-center justify-center"><Image src={"/icons/rabbitmq.svg"} width={48} height={48} alt="rabbitmq"/></li>
+                        <li className="flex items-center justify-center"><Image src={"/icons/pytorch.svg"} width={48} height={48} alt="pytorch"/></li>
+                        <li className="flex items-center justify-center"><Image src={"/icons/scikit_learn.svg"} width={64} height={64} alt="scikit_learn"/></li>
+                    </ul>
             </div>
         </section>
     );

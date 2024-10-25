@@ -9,17 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-        border: "#2e2e2e",
-        card:"#181818",
-        button:"#006239",
-        logos:"#b0b0b0",
-        dark: "#1e1e1e"
-
+       dark:"#1e1e1e",
+       border:"#3a3a3a"
       },
       borderWidth:{
         '0.5':'0.5px'
+      },
+      screens:{
+        xs:"480px"
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
@@ -27,6 +24,8 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 };
 export default config;

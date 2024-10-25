@@ -13,61 +13,49 @@ const Contact: FC = () => {
   };
 
   return (
-    <section className="flex flex-col w-[60%] items-center" id="contact">
-      <div className="flex flex-col justify-start my-10 w-full">
-        <h1 className="font-poppins text-lg font-semibold my-4">Get In Touch</h1>
-        <p className="text-sm">
-          Feel free to reach out if you’re interested in collaborating on a
-          project, sharing ideas, or just having a chat. I’m always open to
-          connecting with others!
-        </p>
-      </div>
-      <form
-        className="flex flex-col w-full bg-card border border-border rounded-xl text-sm"
-        onSubmit={handleSubmit}
-      >
-        <div className="flex flex-col m-4 bg-grey">
-          <input
-            type="email"
-            id="email"
-            placeholder="Email"
-            className="bg-border p-3 rounded-xl focus:outline-none focus:ring-1 focus:ring-orange-500 text-white"
-            required
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-          />
+    <section className="flex flex-col items-center p-6 w-full bg-neutral-800 mt-10" id="contact">
+        <div className="flex flex-col gap-y-4">
+            <h1 className="font-poppins text-xl font-semibold">Get In Touch</h1>
+            <p className="prose prose-sm sm:prose-base text-white">
+                Feel free to reach out if you’re interested in collaborating on a
+                project, sharing ideas, or just having a chat. I’m always open to
+                connecting with others!
+            </p>
+            <form className="flex flex-col gap-y-5 mt-4 prose text-white" onSubmit={handleSubmit}>
+                <input type="email"
+                    id="email"
+                    placeholder="Email"
+                    required
+                    className="bg-neutral-700 rounded-xl p-2 w-full focus:outline-none focus:ring-1 focus:ring-orange-500"
+                    onChange={(e) => {
+                        setEmail(e.target.value)
+                    }}
+                />
+                <input type="text"
+                    id="subject"
+                    placeholder="Subject"
+                    required
+                    className="bg-neutral-700 rounded-xl p-2 w-full focus:outline-none focus:ring-1 focus:ring-orange-500"
+                    onChange={(e) => {
+                        setSubject(e.target.value)
+                    }}
+                />
+                <textarea id="message"
+                    placeholder="Message"
+                    required
+                    rows={9}
+                    className="bg-neutral-700 rounded-xl p-2 w-full focus:outline-none focus:ring-1 focus:ring-orange-500"
+                    onChange={(e) => {
+                        setMessage(e.target.value)
+                    }}
+                />
+                <div className="flex justify-center">
+                    <button className="px-10 py-1 rounded-xl border border-orange-500">
+                        Send
+                    </button>
+                </div>
+            </form>
         </div>
-        <div className="flex flex-col m-4">
-          <input
-            type="text"
-            id="subject"
-            placeholder="Subject"
-            className="bg-border p-3 rounded-xl focus:outline-none focus:ring-1 focus:ring-orange-500 text-white"
-            required
-            onChange={(e) => {
-              setSubject(e.target.value);
-            }}
-          />
-        </div>
-        <div className="flex flex-col m-4">
-          <textarea
-            id="body"
-            placeholder="Message"
-            className="bg-border p-3 rounded-xl focus:outline-none focus:ring-1 focus:ring-orange-500 text-black text-white"
-            required
-            onChange={(e) => {
-              setMessage(e.target.value);
-            }}
-            rows={8}
-          />
-        </div>
-        <div className="flex justify-center m-4">
-          <button className="py-2 px-5 rounded-xl bg-orange-500 focus:ring-1 focus:ring-orange-700">
-            Send
-          </button>
-        </div>
-      </form>
     </section>
   );
 };

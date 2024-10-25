@@ -1,0 +1,18 @@
+{
+    "experience": [
+      {
+        "company": "UBS",
+        "role": "Summer Intern",
+        "startDate": "June 2024",
+        "endDate": "July 2024",
+        "location": "Pune",
+        "technologies": ["Python", "Selenium", "Power BI", "GitLab"],
+        "description": [
+            "Automated UI tests for the internal company website using Selenium to ensure a high-quality user experience.",
+            "Developed and maintained end-to-end scripts that significantly reduced manual testing time.",
+            "Created Power BI reports to visualize GitLab issue resolution trends and generated monthly reports,",
+            "helping management identify bottlenecks and improve team efficiency."
+        ]
+      }
+    ]
+  }
