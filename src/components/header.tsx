@@ -11,6 +11,9 @@ const Header: FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false); // Start with the menu closed
 
     const toggleMenu = () => {
+        if (!isMenuOpen) {
+            window.scrollTo(0,0)
+        }
         setIsMenuOpen(!isMenuOpen);
     };
 
@@ -40,8 +43,8 @@ const Header: FC = () => {
     };
 
     return (
-        <header className="bg-dark border-b-0.5 border-border p-2 sticky top-0 z-40 text-lg">
-            <nav className="p-4 flex">
+        <header className="bg-dark border-b-0.5 border-border p-4 sticky top-0 z-40 text-lg">
+            <nav className="flex">
                 <ul className="w-full hidden sm:flex justify-center space-x-5">
                     <li><Link href="/#about">About</Link></li>
                     <li><Link href="/#experience">Experience</Link></li>
