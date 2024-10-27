@@ -12,9 +12,11 @@ export default function Home() {
       <Header/>
       <main className="flex flex-col items-center">
         <About />
-        <Experience />
-        <hr className="border border-0.5 border-dark w-full max-w-4xl my-5" />
-        <Projects />
+        <div>
+          <Experience />
+          <hr className="border border-0.5 border-dark w-full my-5" />
+           <Projects />
+        </div>
         <Contact />
       </main>
       <footer className="bg-dark flex items-center justify-center gap-x-5 p-7">
