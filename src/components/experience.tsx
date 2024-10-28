@@ -46,7 +46,14 @@ const Experience:FC = async () => {
                                 <span className="ml-2">{exp.startDate + " - " + exp.endDate}</span>
                             </div>
                         </div>
-                        <p className="mt-3 prose prose-sm sm:prose-base">{exp.description.join("")}</p>
+                        <ul className="mt-3 list-disc list-outlined max-w-80ch pl-5">
+                            {exp.description.map((val,index) => (
+                                <li key={index} className="font-lora text-sm sm:text-base mb-1">
+                                    {val}
+                                </li>
+                            ))}
+                        </ul>
+                        <p className="font-lora text-sm sm:text-base"><span className="font-semibold italic mr-3">Technologies: -</span>{exp.technologies.join(", ")}</p>
                     </li>
                 ))}
             </ul>

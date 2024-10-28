@@ -4,7 +4,7 @@ import fs from 'fs/promises';
 
 interface Project {
     title: string;
-    overview: string;
+    description: string[];
     technologies: string[];
     githubLink: string;
   }
@@ -17,13 +17,13 @@ async function fetchProjects():Promise<Project[] | null> {
         
         return projectsData.projects
       } catch (error) {
-        console.error("Error reading experience.json:", error);
+        console.error("Error reading projects.json:", error);
         return null
       }
 }
 
 const Projects:FC = async () => {
-    const experienceData = await fetchProjects()
+    const projectsData = await fetchProjects()
     return(
         <section className="text-dark grid grid-cols-1 gap-x-2 md:grid-cols-4 m-5" id="projects">
             <div className="flex flex-col col-span-1 items-center md:items-start mb-3">
@@ -33,13 +33,19 @@ const Projects:FC = async () => {
                 </div>
             </div>
             <ul className="flex flex-col items-center col-span-1 md:col-span-3">
-                {experienceData?.map((exp,index) => (
+                {projectsData?.map((prj,index) => (
                     <li key={index} className="flex flex-col gap-y-2 mb-5">
                         <div className="flex flex-col items-center md:items-start">
-                            <a href={exp.githubLink} target="_blank" className="font-poppins font-semibold text-lg">{exp.title}</a>
+                            <a href={prj.githubLink} target="_blank" className="font-poppins font-semibold text-lg">{prj.title}</a>
                         </div>
-                        <p className="mt-3 prose prose-sm sm:prose-base">{exp.overview}</p>
-                        <p className="prose prose-sm sm:prose-base"><span className="font-semibold italic mr-3">Technologies: -</span>{exp.technologies.join(", ")}</p>
+                        <ul className="mt-3 list-disc max-w-80ch pl-5">
+                            {prj.description.map((val,index) => (
+                                <li key={index} className="font-lora text-sm sm:text-base mb-1">
+                                    {val}
+                                </li>
+                            ))}
+                        </ul>
+                        <p className="font-lora text-sm sm:text-base"><span className="font-semibold italic mr-3">Technologies: -</span>{prj.technologies.join(", ")}</p>
                     </li>
                 ))}
             </ul>

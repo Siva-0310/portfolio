@@ -1,15 +1,21 @@
 {
     "projects": [
       {
-        "title": "Real-Time Cryptocurrency Alert System",
-        "overview": "This project is a real-time cryptocurrency alert system that fetches price data for various cryptocurrencies using WebSockets. It processes and routes the data through a message broker (RabbitMQ), stores relevant information in PostgreSQL, and utilizes Redis for caching and rapid data access. The architecture is designed to ensure reliability and scalability in handling high-frequency data streams.",
+        "title": "Cryptocurrency Alert System",
+        "description": [
+          "Developed a microservice-based cryptocurrency alert system that continuously monitors real-time market data via WebSocket for selected coins.",
+          "Implemented a Ticker service to store cryptocurrency data in a sync.Map, processing each tick to calculate and publish max/min values to RabbitMQ for efficient message handling.",
+          "Created a Decider service that retrieves alert criteria from PostgreSQL, batches alerts for optimal dispatching, and sends them to the Notifier service for email notifications.",
+          "Utilized Redis caching to ensure efficient alert delivery by preventing redundant notifications, enhancing the overall user experience."
+        ],
         "technologies": [
-          "Docker",
-          "PostgreSQL",
-          "RabbitMQ",
-          "Redis",
           "Go",
-          "Python"
+          "WebSocket",
+          "RabbitMQ",
+          "PostgreSQL",
+          "Redis",
+          "Docker",
+          "Docker Compose"
         ],
         "githubLink": "https://github.com/Siva-0310/crypto-alerts"
       }

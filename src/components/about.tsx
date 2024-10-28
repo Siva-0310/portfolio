@@ -7,14 +7,10 @@ const About: FC = () => {
             <div>
                 <h1 className="font-poppins font-semibold text-xl">About Me</h1>
                 <p className="prose prose-sm sm:prose-base mt-4 text-white">
-                    I’m Siva, a backend developer with a passion for creating scalable and efficient systems. 
-                    I specialize in using <strong className="text-white">Go</strong> and <strong className="text-white">Python</strong> for robust application development, 
-                    along with managing databases like <strong className="text-white">PostgreSQL</strong>. My expertise extends to leveraging <strong className="text-white">Docker</strong> for containerization, 
-                    ensuring seamless deployment and orchestration of services. With a strong foundation in <strong className="text-white">RabbitMQ</strong> for messaging, REST APIs for communication, 
-                    and <strong className="text-white">WebSockets</strong> for real-time interactions, I am dedicated to delivering high-quality solutions that meet user needs. 
-                    I have a keen interest in machine learning, particularly in research-oriented fields. I enjoy tackling challenges and am constantly 
-                    seeking opportunities to improve my skills. I’m eager to learn, collaborate, and contribute to innovative solutions that make a difference. 
-                    Let’s connect!</p>
+                I’m Siva, a backend developer focused on building microservices primarily using Go and Python. I create REST APIs and utilize WebSockets for real-time communication and background services. I am willing to use any programming 
+                language, as I believe no single one is ideal for every project. I have experience with Docker, Docker Compose, and Kubernetes for container orchestration, along with RabbitMQ for message queuing. My database skills include 
+                working with Redis and PostgreSQL. Currently, I am dedicated to enhancing my backend development skills while also exploring machine learning applications to solve real-world problems. I am interested in connecting with you to share insights and discuss innovative ideas in the 
+                tech industry</p>
 
                     <ul className="mt-10 grid grid-cols-4 xs:grid-cols-5 sm:grid-cols-6 lg:grid-cols-7 gap-10">
                         <li className="flex items-center justify-center"><Image src={"/icons/gopher.svg"} width={48} height={48} alt="golang"/></li>
